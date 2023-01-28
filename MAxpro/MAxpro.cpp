@@ -4,7 +4,8 @@
 
 int main()
 {
-    int** arr;
+    char** arr = 0;
+
     int w, h;
     HANDLE hWndConsole;
     if (hWndConsole = GetStdHandle(-12))
@@ -16,9 +17,10 @@ int main()
             h = consoleInfo.srWindow.Bottom - consoleInfo.srWindow.Top + 1;
         }
     }
-    arr = 0;
-    saving(arr, w, h);
-   reading(arr, w, h);
     
+
+    arr = saving(arr, w, h);  
+    reading(arr, w, h);
+    system("pause>nul");
     return 0;
 }

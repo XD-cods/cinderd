@@ -1,38 +1,46 @@
 #include "Function.h"
 
-int** saving(int** arr,int w,int h)
+char** saving(char** MAS,int w,int h)
 {	
 
 
-    int** mass = new int* [w];
-    for(int i=0;i<w;i++)
+    MAS = new char* [h];
+    for(int i=0;i<h;i++)
     {
-    mass[i] = new int[h];
+    MAS[i] = new char[w];
     }
     for (int i = 0; i < h; i++)
     {
-        mass[0][i] = 1;
-        mass[w - 1][i] = 1;
+        for (int b = 0; b < w; b++)
+        {
+           MAS[i][b]=0;
+        }
     }
     for (int i = 0; i < w; i++)
-    {
-        mass[i][0] = 1;
-        mass[i][h - 1] = 1;
+    {        
+        MAS[0][i] = '*';
+        MAS[h - 1][i] = '*';
     }
+    for (int i = 0; i < h; i++)
+    {
+        MAS[i][0] = '*';
+        MAS[i][w - 1] = '*';
+    }
+    
 
-	return mass;
+	return MAS;
 }
 
 
 
-void reading(int** arr,int w,int h)
+void reading(char** MAS,int w,int h)
 {
     
-    for (int i = 0; i < w; i++)
+    for (int i = 0; i < h; i++)
     {
-        for (int b = 0; b < h; b++)
+        for (int b = 0; b < w; b++)
         {
-            cout << arr[i][b];
+            cout << MAS[i][b];
         }
         cout << '\n';
     }
