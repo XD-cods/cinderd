@@ -49,7 +49,7 @@ char** saving(char** MAS,int w,int h)
     MAS[h - 4][d] = 193;
     MAS[h - 4][2*d] = 193;
     MAS[h - 4][0] = 195;
-    MAS[h - 4][w - 1] = 180;
+    MAS[h - 4][w - 1] = 180;    
     MAS[0][d] = 194;
     MAS[0][2 * d] = 194;
 
