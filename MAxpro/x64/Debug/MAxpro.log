@@ -1,16 +1,19 @@
 ﻿  Function.cpp
-D:\Проект\MAxpro\MAxpro\Function.cpp(10,11): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
-D:\Проект\MAxpro\MAxpro\Function.cpp(26,21): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(27,21): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(41,23): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(44,17): warning C4309: =: усечение константного значения
+D:\Проект\MAxpro\MAxpro\Function.cpp(14,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\Проект\MAxpro\MAxpro\Function.cpp(30,15): warning C4309: =: усечение константного значения
+D:\Проект\MAxpro\MAxpro\Function.cpp(31,19): warning C4309: =: усечение константного значения
 D:\Проект\MAxpro\MAxpro\Function.cpp(45,19): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(46,19): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(47,23): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(49,21): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(50,23): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(51,21): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(52,25): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(53,17): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(54,21): warning C4309: =: усечение константного значения
+D:\Проект\MAxpro\MAxpro\Function.cpp(48,14): warning C4309: =: усечение константного значения
+D:\Проект\MAxpro\MAxpro\Function.cpp(49,18): warning C4309: =: усечение константного значения
+D:\Проект\MAxpro\MAxpro\Function.cpp(50,18): warning C4309: =: усечение константного значения
+D:\Проект\MAxpro\MAxpro\Function.cpp(51,22): warning C4309: =: усечение константного значения
+D:\Проект\MAxpro\MAxpro\Function.cpp(53,18): warning C4309: =: усечение константного значения
+D:\Проект\MAxpro\MAxpro\Function.cpp(54,22): warning C4309: =: усечение константного значения
+D:\Проект\MAxpro\MAxpro\Function.cpp(55,18): warning C4309: =: усечение константного значения
+D:\Проект\MAxpro\MAxpro\Function.cpp(56,22): warning C4309: =: усечение константного значения
+D:\Проект\MAxpro\MAxpro\Function.cpp(57,14): warning C4309: =: усечение константного значения
+D:\Проект\MAxpro\MAxpro\Function.cpp(58,18): warning C4309: =: усечение константного значения
+D:\Проект\MAxpro\MAxpro\Function.cpp(154,12): warning C4244: +=: преобразование "double" в "short", возможна потеря данных
+D:\Проект\MAxpro\MAxpro\Function.cpp(158,18): warning C4244: +=: преобразование "double" в "short", возможна потеря данных
+D:\Проект\MAxpro\MAxpro\Function.cpp(165,12): warning C4244: -=: преобразование "double" в "short", возможна потеря данных
   MAxpro.vcxproj -> D:\Проект\MAxpro\x64\Debug\MAxpro.exe

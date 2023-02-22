@@ -1,27 +1,18 @@
-﻿
-
-#include "Function.h"
+﻿#include "Function.h"
 
 int main()
 {
-    char** arr = 0;
-    int w, h;
-    while (1)
-    {
-        HANDLE hWndConsole;
-        if (hWndConsole = GetStdHandle(-12))
-        {
-            CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
-            if (GetConsoleScreenBufferInfo(hWndConsole, &consoleInfo))
-            {
-                w = consoleInfo.srWindow.Right - consoleInfo.srWindow.Left + 1;
-                h = consoleInfo.srWindow.Bottom - consoleInfo.srWindow.Top + 1;
-            }
-        }
-        arr = saving(arr, w, h);
-        reading(arr, w, h);
-        system("pause>nul");
-        system("cls");
-    }
-    return 0;
+	char** arr = 0;
+	int w, h;
+	while (1)
+	{
+		w = size_w();
+		h = size_h();
+		arr = saving(arr, w, h);
+		reading(arr, w, h);
+		gotoxy(1, 1);
+		while(1)control(w, h);
+		system("cls");
+	}
+	return 0;
 }
