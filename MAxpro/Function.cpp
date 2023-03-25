@@ -1,21 +1,76 @@
 #include "Function.h"
 
-HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
 short int x = 1, y = 1;
-COORD curspos = { x,y };
-using namespace std;
+int counter = 0;
+int this_page = 0,max_page=0;
+
+//------------------------------------------------------------------------------------------------
+
+cor** createstb_MAS(int w, int h, cor** MASs)
+{
+	MASs = (cor**)malloc(w * sizeof(cor*));
+	for (int i = 0; i < w; i++)
+	{
+		MASs[i] = (cor*)malloc(2 * sizeof(cor));
+		MASs[i][0].xx = 0;
+		MASs[i][0].yy = 0;
+		MASs[i][1].xx = 0;
+		MASs[i][1].yy = 0;
+	}
+	return MASs;
+}
+
+//------------------------------------------------------------------------------------------------
+
+cor** createstr_MAS(int w, int h, cor** MASs,int n)
+{
+	for (int i = 0; i < w; i++)
+	{
+		MASs[i] = (cor*)malloc(n * sizeof(cor));
+	}
+	return MASs;
+}
+
+//------------------------------------------------------------------------------------------------
+
+void cin_elem(int w, int h, cor** MASS)
+{
+	char c;
+	if (counter < w)
+	{
+		scanf_s("%c", &MASS[counter][this_page].name);
+		MASS[counter][this_page].xx = x;
+		MASS[counter][this_page].yy = y;
+		counter++;
+		/*gotoxy(1, 1);*/
+		c = ' ';
+		gotoxy(x, y);
+	}
+}
+//------------------------------------------------------------------------------------------------
+
+//void del_elem(int w, cor** MASS)
+//{
+//	for(int i=0;i<w;i++)
+//	{
+//		if (MASS[i][0].xx == x && MASS[i][0].yy = y)
+//		{
+//			MASS[i][0].name = "";
+//		}
+//	}
+//}
 
 //------------------------------------------------------------------------------------------------
 
 char** saving(char** MAS, int w, int h)
 {
 
-	MAS = new char* [h];
+	MAS = (char**)calloc(h, sizeof(char));
 	int d = w * 0.3;
 
 	for (int i = 0; i < h; i++)
 	{
-		MAS[i] = new char[w];
+		MAS[i] = (char*)calloc(w, sizeof(char));
 	}
 
 	for (int i = 1; i < h; i++)
@@ -65,22 +120,38 @@ char** saving(char** MAS, int w, int h)
 
 //------------------------------------------------------------------------------------------------
 
-void reading(char** MAS, int w, int h)
+void reading(char** MAS, int w, int h, cor** MASs)
 {
 	for (int i = 0; i < h; i++)
 	{
 		for (int b = 0; b < w; b++)
 		{
-			cout << MAS[i][b];
+			printf("%c", MAS[i][b]);
 		}
-		cout << '\n';
+		printf("\n");
 	}
+	gotoxy(1, h - 3);
+	printf("ENTER - input | ESC - exit | E - next page | Q - prewiew page");
+	gotoxy((w-1)/2-3, h - 1);
+	printf("%d / %d", this_page, max_page);
+	for (int i = 0; i < w; i++)
+	{
+		if (MASs[i][this_page].xx != 0 && MASs[i][this_page].yy != 0)
+		{
+			gotoxy(MASs[i][this_page].xx, MASs[i][this_page].yy);
+			printf("%c", MASs[i][this_page].name);
+		}
+
+	}
+	gotoxy(0, 0);
+	gotoxy(1, 1);
 }
 
 //------------------------------------------------------------------------------------------------
 
 int size_h()
 {
+	HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
 	int h;
 	if (hStdOut = GetStdHandle(-12))
 	{
@@ -97,8 +168,8 @@ int size_h()
 
 int size_w()
 {
+	HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
 	int w;
-	HANDLE hStdOut;
 	if (hStdOut = GetStdHandle(-12))
 	{
 		CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
@@ -112,8 +183,10 @@ int size_w()
 
 //------------------------------------------------------------------------------------------------
 
-void gotoxy(short int j, short int h) {
-	curspos = { j , h };
+void gotoxy(short int j, short int h)
+{
+	HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
+	COORD curspos = { j , h };
 	SetConsoleCursorPosition(hStdOut, curspos);
 }
 
@@ -121,6 +194,7 @@ void gotoxy(short int j, short int h) {
 
 void showCursor(bool visible)
 {
+	HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
 	CONSOLE_CURSOR_INFO ccInfo;
 	ccInfo.bVisible = visible;
 	ccInfo.dwSize = 20;
@@ -129,7 +203,7 @@ void showCursor(bool visible)
 
 //------------------------------------------------------------------------------------------------
 
-void control(int w, int h)
+int control(char** MASS, int w, int h, cor** MASi)
 {
 	char g = _getch();
 	switch (g)
@@ -159,6 +233,18 @@ void control(int w, int h)
 			gotoxy(x, y);
 		}
 		break;
+	case 13:
+		cin_elem(w, h, MASi);
+		break;
+	case 27:
+		return 0;
+	case 101:
+		this_page++;
+		if (this_page < max_page) {
+			max_page++;
+			createstr_MAS(w,h,MASi,max_page);
+		}
+		break;
 	case 75:
 		if (x > 1)
 		{
@@ -167,5 +253,6 @@ void control(int w, int h)
 		}
 		break;
 	}
+	return control(MASS, w, h, MASi);
 }
 

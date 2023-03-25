@@ -1,19 +1,25 @@
 ﻿  Function.cpp
-D:\Проект\MAxpro\MAxpro\Function.cpp(14,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
-D:\Проект\MAxpro\MAxpro\Function.cpp(30,15): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(31,19): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(45,19): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(48,14): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(49,18): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(50,18): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(51,22): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(53,18): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(54,22): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(55,18): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(56,22): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(57,14): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(58,18): warning C4309: =: усечение константного значения
-D:\Проект\MAxpro\MAxpro\Function.cpp(154,12): warning C4244: +=: преобразование "double" в "short", возможна потеря данных
-D:\Проект\MAxpro\MAxpro\Function.cpp(158,18): warning C4244: +=: преобразование "double" в "short", возможна потеря данных
-D:\Проект\MAxpro\MAxpro\Function.cpp(165,12): warning C4244: -=: преобразование "double" в "short", возможна потеря данных
-  MAxpro.vcxproj -> D:\Проект\MAxpro\x64\Debug\MAxpro.exe
+D:\VS\MAxpro\MAxpro\Function.cpp(41,11): warning C4473: "scanf_s": передано недостаточно аргументов для строки формата
+D:\VS\MAxpro\MAxpro\Function.cpp(41,11): message : заполнители и их параметры ожидают переменное число аргументов в количестве 2, но было предоставлено 1
+D:\VS\MAxpro\MAxpro\Function.cpp(41,11): message : отсутствующий вариативный аргумент "2" требуется для строки форматирования "%c"
+D:\VS\MAxpro\MAxpro\Function.cpp(41,11): message : этот аргумент используется в качестве размера буфера
+D:\VS\MAxpro\MAxpro\Function.cpp(69,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\VS\MAxpro\MAxpro\Function.cpp(85,15): warning C4309: =: усечение константного значения
+D:\VS\MAxpro\MAxpro\Function.cpp(86,19): warning C4309: =: усечение константного значения
+D:\VS\MAxpro\MAxpro\Function.cpp(100,19): warning C4309: =: усечение константного значения
+D:\VS\MAxpro\MAxpro\Function.cpp(103,14): warning C4309: =: усечение константного значения
+D:\VS\MAxpro\MAxpro\Function.cpp(104,18): warning C4309: =: усечение константного значения
+D:\VS\MAxpro\MAxpro\Function.cpp(105,18): warning C4309: =: усечение константного значения
+D:\VS\MAxpro\MAxpro\Function.cpp(106,22): warning C4309: =: усечение константного значения
+D:\VS\MAxpro\MAxpro\Function.cpp(108,18): warning C4309: =: усечение константного значения
+D:\VS\MAxpro\MAxpro\Function.cpp(109,22): warning C4309: =: усечение константного значения
+D:\VS\MAxpro\MAxpro\Function.cpp(110,18): warning C4309: =: усечение константного значения
+D:\VS\MAxpro\MAxpro\Function.cpp(111,22): warning C4309: =: усечение константного значения
+D:\VS\MAxpro\MAxpro\Function.cpp(112,14): warning C4309: =: усечение константного значения
+D:\VS\MAxpro\MAxpro\Function.cpp(113,18): warning C4309: =: усечение константного значения
+D:\VS\MAxpro\MAxpro\Function.cpp(142,11): warning C4477: "printf": в строке форматирования "%c" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "char *"
+D:\VS\MAxpro\MAxpro\Function.cpp(142,11): warning C4313: printf: конфликт "%c" в строке формата с аргументом 1 типа "char *"
+D:\VS\MAxpro\MAxpro\Function.cpp(228,12): warning C4244: +=: преобразование "double" в "short", возможна потеря данных
+D:\VS\MAxpro\MAxpro\Function.cpp(232,18): warning C4244: +=: преобразование "double" в "short", возможна потеря данных
+D:\VS\MAxpro\MAxpro\Function.cpp(251,12): warning C4244: -=: преобразование "double" в "short", возможна потеря данных
+  MAxpro.vcxproj -> D:\VS\MAxpro\x64\Debug\MAxpro.exe
